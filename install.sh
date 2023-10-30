@@ -69,8 +69,8 @@ launchPythonServer() {
       else
         echo "Error 404"
         exit
+      fi
     fi
-    esac
 }
 
 if [ ! -e "python" ] && [ ! -e "nodejs" ]; then
