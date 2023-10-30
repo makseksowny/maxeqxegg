@@ -112,7 +112,7 @@ case $n in
   ;;
 esac  
 else
-if [ -e "python" ]; then
+if [ -e "python3" ]; then
     display
     launchPythonServer
 elif [ -e "nodejs" ]; then
