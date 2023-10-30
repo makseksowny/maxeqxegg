@@ -34,7 +34,7 @@ launchNodeServer() {
     fi
     case $action in
       1)
-        if [[ "${NODE_MAIN_FILE}" == "*.js" ]]; then
+        if [[ "${NODE_MAIN_FILE}" == *".js" ]]; then
         node "${NODE_MAIN_FILE}"
         else
         if [ ! "$(command -v ts-node)" ]; then
@@ -64,7 +64,7 @@ launchPythonServer() {
     if [ -n "$PYTHON_DEFAULT_ACTION" ]; then
       action="$PYTHON_DEFAULT_ACTION"
     else
-      if [[ "${PYTHON_MAIN_FILE}" == "*.py" ]]; then
+      if [[ "${PYTHON_MAIN_FILE}" == *".py" ]]; then
         python3 "${PYTHON_MAIN_FILE}"
       else
         echo "Error 404"
