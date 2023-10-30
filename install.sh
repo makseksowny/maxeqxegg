@@ -72,7 +72,6 @@ launchPythonServer() {
       fi
     fi
 }
-
 if [ ! -e "python" ] && [ ! -e "nodejs" ]; then
     display
 sleep 5
