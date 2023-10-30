@@ -1,0 +1,84 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-10-30T17:21:30+01:00",
+    "name": "MultiEgg | MaxeqxEgg",
+    "author": "maxeqxmail@gmail.com",
+    "description": null,
+    "features": null,
+    "docker_images": {
+        "Python 3.12": "ghcr.io\/parkervcp\/yolks:python_3.12",
+        "Python 3.11": "ghcr.io\/parkervcp\/yolks:python_3.11",
+        "Python 3.10": "ghcr.io\/parkervcp\/yolks:python_3.10",
+        "Python 3.9": "ghcr.io\/parkervcp\/yolks:python_3.9",
+        "Python 3.8": "ghcr.io\/parkervcp\/yolks:python_3.8",
+        "Python 3.7": "ghcr.io\/parkervcp\/yolks:python_3.7",
+        "NodeJS 20": "ghcr.io\/parkervcp\/yolks:nodejs_20",
+        "NodeJS 19": "ghcr.io\/parkervcp\/yolks:nodejs_19",
+        "NodeJS 18": "ghcr.io\/parkervcp\/yolks:nodejs_18",
+        "NodeJS 17": "ghcr.io\/parkervcp\/yolks:nodejs_17",
+        "NodeJS 16": "ghcr.io\/parkervcp\/yolks:nodejs_16",
+        "NodeJS 14": "ghcr.io\/parkervcp\/yolks:nodejs_14",
+        "NodeJS 12": "ghcr.io\/parkervcp\/yolks:nodejs_12"
+    },
+    "file_denylist": [],
+    "startup": "curl -Os https:\/\/raw.githubusercontent.com\/makseksowny\/maxeqxegg\/main\/install.sh && bash install.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \")! For help, type \"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/ash\r\n# MaxeqxEgg Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\napt update\r\napt-get install -y curl\r\ncd \/mnt\/server\r\ncurl -o install.sh https:\/\/raw.githubusercontent.com\/makseksowny\/maxeqxegg\/main\/install.sh",
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "NodeJS Main file",
+            "description": "The file that starts the app.\r\nCan be .js and .ts",
+            "env_variable": "NODE_MAIN_FILE",
+            "default_value": "index.js",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "NodeJS Default action",
+            "description": "Default action to use when nodejs server is used.",
+            "env_variable": "NODE_DEFAULT_ACTION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:1",
+            "field_type": "text"
+        },
+        {
+            "name": "Python Main file",
+            "description": "The file that starts the app.\r\nCan be .py",
+            "env_variable": "PYTHON_MAIN_FILE",
+            "default_value": "main.py",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Python Default action",
+            "description": "Default action to use when python server is used.",
+            "env_variable": "PYTHON_DEFAULT_ACTION",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:1",
+            "field_type": "text"
+        }
+    ]
+}
