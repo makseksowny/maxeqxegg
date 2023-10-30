@@ -72,7 +72,7 @@ launchPythonServer() {
       fi
     fi
 }
-if [ ! -e "python" ] && [ ! -e "nodejs" ]; then
+if [ ! -e "python3" ] && [ ! -e "nodejs" ]; then
     display
 sleep 5
 echo "
