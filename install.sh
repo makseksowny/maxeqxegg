@@ -65,7 +65,7 @@ launchPythonServer() {
       action="$PYTHON_DEFAULT_ACTION"
     else
       if [[ "${PYTHON_MAIN_FILE}" == *".py" ]]; then
-        python3 "${PYTHON_MAIN_FILE}"
+        pip install -r requirements.txt && python3 "${PYTHON_MAIN_FILE}"
       else
         echo "Error 404"
         exit
