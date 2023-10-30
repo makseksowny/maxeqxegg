@@ -70,7 +70,6 @@ launchPythonServer() {
         echo "Error 404"
         exit
     fi
-    esac
 }
 
 if [ ! -e "python" ] && [ ! -e "nodejs" ]; then
